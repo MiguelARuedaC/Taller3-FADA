@@ -4,8 +4,6 @@ def stoogesort(arr, s, e):
     if s >= e: # Condicion de parada, si el indice de inicio es igual o mayor al del final
         return
 
-
-# than last,swap them
     if arr[s]>arr[e]:
         t = arr[s]
         arr[s] = arr[e]
