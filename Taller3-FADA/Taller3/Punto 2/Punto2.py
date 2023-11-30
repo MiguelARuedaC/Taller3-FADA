@@ -56,7 +56,7 @@ arreglo_b = [1, 1, 2, 2, 2, 3, 4, 4, 4]
 moda_a = encontrar_moda(arreglo_a)
 moda_b = encontrar_moda(arreglo_b)
 
-# Imprimir los resultados
+
 print("Moda de arreglo A:", moda_a)
 print("Moda de arreglo B:", moda_b)
 
