@@ -2,7 +2,7 @@
 Punto 2 correspondiente al taller 3
 29 de noviembre del 2023
 Miguel Angel Rueda Colonia - 2159896
-Leider Santiago Cortes Hernandez - (codigo)
+Leider Santiago Cortes Hernandez - 2159879
 
 """
 
