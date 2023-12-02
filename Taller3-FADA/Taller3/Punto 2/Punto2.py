@@ -5,8 +5,10 @@ Miguel Angel Rueda Colonia - 2159896
 Leider Santiago Cortes Hernandez - (2159879)
 
 """
-
 # Función principal para encontrar la moda de un arreglo
+import random
+import timeit
+
 def encontrar_moda(arr):
     # Manejar caso base: arreglo vacío
     if not arr:
@@ -49,15 +51,30 @@ def encontrar_moda_iterativa(elementos, frecuencias):
     return moda
 
 # Ejemplos de uso
-arreglo_a = [1, 1, 2, 3]
-arreglo_b = [1, 1, 2, 2, 2, 3, 4, 4, 4]
+#arreglo_a = [1, 1, 2, 3]
+#arreglo_b = [1, 1, 2, 2, 2, 3, 4, 4, 4]
+
 
 # Llamar a la función para encontrar la moda de cada arreglo
-moda_a = encontrar_moda(arreglo_a)
-moda_b = encontrar_moda(arreglo_b)
+arreglo_aleatorioA = [random.randint(1, 100) for _ in range(10)]
+arreglo_aleatorioB = [random.randint(1, 100) for _ in range(100)]
+arreglo_aleatorioC = [random.randint(1, 100) for _ in range(1000)]
+arreglo_aleatorioD = [random.randint(1, 100) for _ in range(10000)]
+
+moda_A = encontrar_moda(arreglo_aleatorioA)
+moda_B = encontrar_moda(arreglo_aleatorioB)
+moda_C = encontrar_moda(arreglo_aleatorioC)
+moda_D = encontrar_moda(arreglo_aleatorioD)
 
 
-print("Moda de arreglo A:", moda_a)
-print("Moda de arreglo B:", moda_b)
+#Funcion para tomar el tiempo de culminación de ejecución
+print(timeit.timeit(lambda: encontrar_moda(arreglo_aleatorioA), number=10))
+print(timeit.timeit(lambda: encontrar_moda(arreglo_aleatorioB), number=10))
+print(timeit.timeit(lambda: encontrar_moda(arreglo_aleatorioC), number=10))
+print(timeit.timeit(lambda: encontrar_moda(arreglo_aleatorioD), number=10))
 
 
+
+
+# Mostrar el arreglo generado
+print("Arreglo Aleatorio de 5 Datos:", arreglo_aleatorioA)
